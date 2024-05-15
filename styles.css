@@ -1,6 +1,10 @@
 /* Importing fonts */
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Quicksand:wght@300..700&family=Teachers:ital,wght@0,400..800;1,400..800&display=swap');
 
+:root {
+  --random-color: #000000; /* Set an initial color */
+}
+
 /* Reset styles */
 * {
   box-sizing: border-box;
@@ -21,6 +25,16 @@ body {
   line-height: 1.6;
 }
 
+/* Link styles */
+a:link,
+a:visited,
+a:hover,
+a:active,
+a:focus {
+  text-decoration: none;
+  color: var(--random-color);
+}
+
 /* Navbar styles */
 #navbar {
   align-items: center;
@@ -33,11 +47,12 @@ body {
 
 #navbar a {
   color: #fff;
-  text-decoration: none;
+  padding: 0.5em;
+  text-transform: uppercase;
 }
 
 #navbar a:hover {
-  color: purple;
+  background-color: var(--random-color);
 }
 
 /* Nav links styles */
@@ -64,8 +79,7 @@ body {
   padding: 0.5em;
 }
 
-#about-me,
-#projects,
+#about,
 #contact-me {
   padding: 1em;
 }
@@ -85,10 +99,9 @@ body {
 .project {
   align-items: center;
   aspect-ratio: 1/1;
-  background-color: #333;
+  background-color: #666;
   border-radius: 50%;
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
-  color: #fff;
   cursor: pointer;
   display: inline-flex;
   justify-content: center;
@@ -106,6 +119,13 @@ body {
 .project h3 {
   font-size: 1.3rem;
 }
+
+.copyright {
+  font-family: "Teachers", sans-serif;
+  text-align: center;
+  padding-bottom: 0.5em;
+}
+
 
 /* Animation styles */
 @keyframes flip {
