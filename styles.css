@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Quicksand:wght@300..700&family=Teachers:ital,wght@0,400..800;1,400..800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Quicksand", sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f4f4f4;
+}
+
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  color: #fff;
+  padding: 1.3em;
+}
+
+#navbar a {
+  color: #fff;
+  text-decoration: none;
+}
+
+#navbar a:hover {
+  color: purple;
+}
+
+#nav-links ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: space-between;
+  list-style: none;
+  padding: 0;
+}
+
+.dosis-title {
+  font-family: "Dosis", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+}
+
+.my-name {
+  padding: 0.5em;
+}
+
+#about-me {
+  padding: 1em;
+}
+
+#my-projects h2 {
+  padding: 0.65em;
+}
+
+#projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  grid-template-rows: repeat(auto-fill, minmax(150px, 1fr));
+  padding: 60px 340px;
+}
+
+.project {
+  display: inline-flex; /* centers text */
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  padding: 1em;
+  margin: 1em;
+  background-color: #333;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+  color: #fff;
+  cursor: pointer;
+  text-align: center;
+  perspective: 1000px;
+}
+
+.project:nth-child(odd) {
+  background-color: lightgray;
+  color: #566;
+}
+
+
+@keyframes flip {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(1turn);
+  }
+}
+
+.project.animate {
+  animation: flip 1s infinite;
+}
+
+.project h3 {
+  font-size: 1.3rem;
+}
