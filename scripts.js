@@ -1,6 +1,7 @@
 // Add coin flip effect to .project elements
 const projects = document.querySelectorAll('.project'); 
-const navbarLinks = document.querySelectorAll('a');
+const links = document.querySelectorAll('a');
+const projectTitles = document.querySelectorAll('.project h3');
 
 function randomColor() {  
   const randomColor = Math.floor(Math.random()*16777215).toString(16);
@@ -19,7 +20,7 @@ projects.forEach(project => {
   });
 });
 
-navbarLinks.forEach(link => {
+links.forEach(link => {
   let originalColor;
 
   link.addEventListener('mouseover', () => {
@@ -32,5 +33,19 @@ navbarLinks.forEach(link => {
 
   link.addEventListener('mouseleave', () => {
     link.style.color = originalColor;
+  });
+});
+
+projectTitles.forEach(title => {
+  let originalColor;
+
+  title.addEventListener('mouseover', () => {
+    originalColor = getComputedStyle(title).color;
+    const color = randomColor();
+    title.style.color = color;
+  });
+
+  title.addEventListener('mouseleave', () => {
+    title.style.color = originalColor;
   });
 });
