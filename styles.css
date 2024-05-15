@@ -99,7 +99,7 @@ a:focus {
 .project {
   align-items: center;
   aspect-ratio: 1/1;
-  background-color: #666;
+  background-color: lightgray;
   border-radius: 50%;
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
   cursor: pointer;
@@ -111,13 +111,10 @@ a:focus {
   text-align: center;
 }
 
-.project:nth-child(odd) {
-  background-color: lightgray;
-  color: #566;
-}
-
 .project h3 {
-  font-size: 1.3rem;
+  color: rgb(66, 78, 67);
+  font-size: 1.5rem;
+  font-weight: 500;
 }
 
 .copyright {
