@@ -140,3 +140,9 @@ a:focus {
 .project.animate {
   animation: flip 1s infinite;
 }
+
+/* Font styles */
+
+.bold {
+  font-weight: bold;
+}
