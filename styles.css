@@ -1,28 +1,33 @@
+/* Importing fonts */
 @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Quicksand:wght@300..700&family=Teachers:ital,wght@0,400..800;1,400..800&display=swap');
 
+/* Reset styles */
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
+/* HTML styles */
 html {
   scroll-behavior: smooth;
 }
 
+/* Body styles */
 body {
+  background-color: #f4f4f4;
+  color: #333;
   font-family: "Quicksand", sans-serif;
   line-height: 1.6;
-  color: #333;
-  background-color: #f4f4f4;
 }
 
+/* Navbar styles */
 #navbar {
-  display: flex;
-  justify-content: space-between;
   align-items: center;
   background-color: #333;
   color: #fff;
+  display: flex;
+  justify-content: space-between;
   padding: 1.3em;
 }
 
@@ -35,26 +40,33 @@ body {
   color: purple;
 }
 
+/* Nav links styles */
 #nav-links ul {
   display: flex;
   justify-content: space-between;
-  align-items: space-between;
   list-style: none;
   padding: 0;
 }
 
+#nav-links ul li {
+  margin: 0 10px;
+}
+
+/* Specific sections styles */
 .dosis-title {
   font-family: "Dosis", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 200;
   font-style: normal;
+  font-weight: 200;
 }
 
 .my-name {
   padding: 0.5em;
 }
 
-#about-me {
+#about-me,
+#projects,
+#contact-me {
   padding: 1em;
 }
 
@@ -62,6 +74,7 @@ body {
   padding: 0.65em;
 }
 
+/* Projects styles */
 #projects {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
@@ -70,19 +83,19 @@ body {
 }
 
 .project {
-  display: inline-flex; /* centers text */
-  justify-content: center;
   align-items: center;
-  border-radius: 50%;
   aspect-ratio: 1/1;
-  padding: 1em;
-  margin: 1em;
   background-color: #333;
+  border-radius: 50%;
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
   color: #fff;
   cursor: pointer;
-  text-align: center;
+  display: inline-flex;
+  justify-content: center;
+  margin: 1em;
+  padding: 1em;
   perspective: 1000px;
+  text-align: center;
 }
 
 .project:nth-child(odd) {
@@ -90,7 +103,11 @@ body {
   color: #566;
 }
 
+.project h3 {
+  font-size: 1.3rem;
+}
 
+/* Animation styles */
 @keyframes flip {
   0% {
     transform: rotateY(0deg);
@@ -102,8 +119,4 @@ body {
 
 .project.animate {
   animation: flip 1s infinite;
-}
-
-.project h3 {
-  font-size: 1.3rem;
 }
