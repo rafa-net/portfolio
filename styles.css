@@ -134,7 +134,7 @@ a:focus {
 }
 
 .project.animate {
-  animation: flip 1s infinite;
+  animation: flip 1s;
 }
 
 /* Font styles */
